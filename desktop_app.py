@@ -1,4 +1,4 @@
-﻿import os
+import os
 import socket
 import threading
 import time
@@ -26,7 +26,7 @@ def _run_server(host: str, port: int):
 def main():
     if "DATA_DIR" not in os.environ:
         repo_root = Path(__file__).resolve().parent
-        os.environ["DATA_DIR"] = str(repo_root / "appdata" / "config" / "capotokeys")
+        os.environ["DATA_DIR"] = str(repo_root / "appdata" / "config" / "Capo2Keys")
 
     host = "127.0.0.1"
     port = int(os.getenv("DESKTOP_PORT", "4506"))
@@ -42,7 +42,7 @@ def main():
     except ImportError as exc:
         raise SystemExit("Desktop mode needs pywebview. Install requirements-desktop.txt") from exc
 
-    # Let links with target=_blank open in the system browser.`r`n    # This ensures file downloads work in desktop executable mode.`r`n    webview.settings["OPEN_EXTERNAL_LINKS_IN_BROWSER"] = True`r`n    webview.create_window("CapoToKeys", f"http://{host}:{port}", min_size=(960, 700))
+    # Let links with target=_blank open in the system browser.`r`n    # This ensures file downloads work in desktop executable mode.`r`n    webview.settings["OPEN_EXTERNAL_LINKS_IN_BROWSER"] = True`r`n    webview.create_window("Capo2Keys", f"http://{host}:{port}", min_size=(960, 700))
     webview.start()
 
 

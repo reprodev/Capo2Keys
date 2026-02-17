@@ -1,4 +1,4 @@
-﻿import os
+import os
 from datetime import datetime
 from flask import Flask, request, render_template, send_from_directory, redirect, url_for, flash, current_app
 
@@ -13,7 +13,7 @@ from utils import (
     is_supported_output_file,
 )
 
-DEFAULT_FLASK_SECRET = "capotokeys-local"
+DEFAULT_FLASK_SECRET = "Capo2Keys-local"
 
 
 def _env_int(name: str, default: int, minimum: int | None = None, maximum: int | None = None) -> int:

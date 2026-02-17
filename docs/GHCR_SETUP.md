@@ -1,4 +1,4 @@
-﻿# GHCR Setup For Docker Compose
+# GHCR Setup For Docker Compose
 
 This project publishes container images to GitHub Container Registry (GHCR).
 
@@ -32,7 +32,7 @@ Tags produced include:
 Image path format:
 
 - `ghcr.io/<owner>/<repo>:<tag>`
-- For this repo: `ghcr.io/reprodev/capotokeys:<tag>`
+- For this repo: `ghcr.io/reprodev/Capo2Keys:<tag>`
 
 ## 3) Make Image Pullable From Compose
 
@@ -57,12 +57,12 @@ docker compose -f docker-compose.ghcr.yml up -d
 
 For non-release testing from `dev`, use:
 
-- `ghcr.io/reprodev/capotokeys:dev`
+- `ghcr.io/reprodev/Capo2Keys:dev`
 
 For stable release usage, prefer:
 
-- `ghcr.io/reprodev/capotokeys:v1.0`
-- or explicit version tags like `ghcr.io/reprodev/capotokeys:v1.1.0`
+- `ghcr.io/reprodev/Capo2Keys:v1.0`
+- or explicit version tags like `ghcr.io/reprodev/Capo2Keys:v1.1.0`
 
 
 

@@ -1,4 +1,4 @@
-﻿__pycache__/
+__pycache__/
 *.py[cod]
 *.pyo
 *.pyd
@@ -7,8 +7,8 @@
 .ruff_cache/
 
 # local generated outputs
-appdata/config/capotokeys/outputs/*
-!appdata/config/capotokeys/outputs/.gitkeep
+appdata/config/Capo2Keys/outputs/*
+!appdata/config/Capo2Keys/outputs/.gitkeep
 
 # local test scratch
 tests/.tmp/

@@ -1,8 +1,8 @@
-﻿# CapoToKeys
+# Capo2Keys
 
 Convert guitar capo chord charts into piano-ready keys while preserving lyrics and chord structure.
 
-CapoToKeys provides a Docker-first Flask WebUI, a CLI mode for scripts, and an optional desktop app build from the same codebase.
+Capo2Keys provides a Docker-first Flask WebUI, a CLI mode for scripts, and an optional desktop app build from the same codebase.
 
 ## Features
 
@@ -35,7 +35,7 @@ CapoToKeys provides a Docker-first Flask WebUI, a CLI mode for scripts, and an o
 docker build -t capo-to-keys:latest -f dockerfile .
 
 docker run -d \
-  --name capotokeys \
+  --name Capo2Keys \
   -p 4506:4506 \
   -v "./data:/data" \
   capo-to-keys:latest
@@ -50,12 +50,12 @@ Outputs are written to `/data/outputs` (mapped to your local volume path).
 ## Pull From GHCR (No Local Build)
 
 ```bash
-docker pull ghcr.io/reprodev/capotokeys:latest
+docker pull ghcr.io/reprodev/Capo2Keys:latest
 docker run -d \
-  --name capotokeys \
+  --name Capo2Keys \
   -p 4506:4506 \
   -v "./data:/data" \
-  ghcr.io/reprodev/capotokeys:latest
+  ghcr.io/reprodev/Capo2Keys:latest
 ```
 
 ## Quick Start (GHCR + Compose)
@@ -68,7 +68,7 @@ docker compose up -d
 
 Default image reference in that file:
 
-- `ghcr.io/reprodev/capotokeys:latest`
+- `ghcr.io/reprodev/Capo2Keys:latest`
 
 If the package is private, authenticate first:
 
@@ -150,7 +150,7 @@ python desktop_app.py
 Build executable:
 
 ```bash
-pyinstaller --noconfirm --onefile --windowed --name CapoToKeys desktop_app.py
+pyinstaller --noconfirm --onefile --windowed --name Capo2Keys desktop_app.py
 ```
 
 ## Development

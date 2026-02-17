@@ -1,4 +1,4 @@
-﻿import os
+import os
 import sys
 import argparse
 from datetime import datetime
@@ -24,7 +24,7 @@ def prompt_capo() -> int:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="CapoToKeys CLI (no LLM)")
+    parser = argparse.ArgumentParser(description="Capo2Keys CLI (no LLM)")
     parser.add_argument("--list", action="store_true", help="List saved outputs")
     parser.add_argument("--capo", type=int, help="Capo number (0-11)")
     parser.add_argument("--semitones", type=int, help="Transpose by semitones (0-11; overrides capo)")

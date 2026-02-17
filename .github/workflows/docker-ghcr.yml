@@ -1,4 +1,4 @@
-﻿name: Docker GHCR
+name: Docker GHCR
 
 on:
   push:
@@ -35,7 +35,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/reprodev/capotokeys
+          images: ghcr.io/reprodev/Capo2Keys
           tags: |
             type=sha,prefix=sha-
             type=ref,event=branch

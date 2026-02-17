@@ -1,4 +1,4 @@
-﻿name: Desktop Release
+name: Desktop Release
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
       - name: Build executable
         shell: powershell
         run: |
-          pyinstaller --noconfirm --onefile --windowed --name CapoToKeys `
+          pyinstaller --noconfirm --onefile --windowed --name Capo2Keys `
             --add-data "templates;templates" `
             --add-data "static;static" `
             desktop_app.py
@@ -38,16 +38,16 @@ jobs:
       - name: Archive artifact
         shell: powershell
         run: |
-          Compress-Archive -Path dist\CapoToKeys.exe -DestinationPath dist\CapoToKeys-windows.zip -Force
+          Compress-Archive -Path dist\Capo2Keys.exe -DestinationPath dist\Capo2Keys-windows.zip -Force
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: CapoToKeys-windows
-          path: dist/CapoToKeys-windows.zip
+          name: Capo2Keys-windows
+          path: dist/Capo2Keys-windows.zip
 
       - name: Attach to GitHub Release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/CapoToKeys-windows.zip
+          files: dist/Capo2Keys-windows.zip

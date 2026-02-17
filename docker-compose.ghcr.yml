@@ -1,7 +1,7 @@
-﻿services:
-  capotokeys:
-    image: ghcr.io/reprodev/capotokeys:latest
-    container_name: capotokeys
+services:
+  Capo2Keys:
+    image: ghcr.io/reprodev/capo2keys:latest
+    container_name: Capo2Keys
     ports:
       - "4506:4506"
     volumes:
