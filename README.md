@@ -2,6 +2,8 @@
 
 Convert guitar capo chord charts into piano-ready keys while preserving lyrics and chord structure.
 
+![Capo2Keys Logo](docs/assets/Capo2KeysSmallV01.png)
+
 Capo2Keys provides a Docker-first Flask WebUI, a CLI mode for scripts, and an optional desktop app build from the same codebase.
 
 ## Features
@@ -15,19 +17,50 @@ Capo2Keys provides a Docker-first Flask WebUI, a CLI mode for scripts, and an op
 
 ## Screenshots
 
-> Replace the placeholders below with your own captures.
-
 ### Generator View
 
-![Generator View](docs/assets/screenshot-generator.png)
+![Generator View 01](docs/assets/01-Capo2KeysGeneratorV01.png)
+
+- Pick Your Capo from 0 to 11 (0 to Apply No Capo)
+- Fill in the Song Title and Your Artist (Title by Song Artist)
+- Copy and Paste your Capo Chords
+
+![Generator View 02](docs/assets/02-Capo2KeysGeneratorV01.png)
+
+- Click **Generate Tranpostion** to generate your Guitar Capo Chords tranposed to Piano Chords with all the lyrics
+- Download Your PDF or TXT File from here or click **Browse Archive** to view all your generated Piano Chords
+
+![Generator View 03](docs/assets/03-Capo2KeysGeneratorV01.png)
+
+---
 
 ### Archive View
 
-![Archive View](docs/assets/screenshot-archive.png)
+- Browse the Archive to see your latest tranposed chords or the ones you've prepared earlier
 
-### Desktop App (Optional)
+![Archive View 01](docs/assets/04-Capo2KeysArchiveV01.png)
 
-![Desktop View](docs/assets/screenshot-desktop.png)
+- Each song generates a PDF and TXT file and these are grouped together at the top for easy navigation
+- Songs are saved here in the Data folder of the Docker Container where it has been ran or a mounted drive defined in the Docker Compose or Docker Run
+- Click the Bin next to each group to download both of the grouped chord sheets
+
+![Archive View 01](docs/assets/05-Capo2KeysArchiveV01.png)
+
+- This archive is now empty but it's ready to be filled up again
+
+![Archive View 02](docs/assets/06-Capo2KeysArchiveV01.png)
+
+---
+
+## Why did I make this?
+
+I took up the piano now just over a few years ago and have played guitar for much longer than that. I loved being able to pick up the guitar with a capo and play songs from Chord sheets on the internet. The main problem was that my music theory was not good enough to be able to easily tranpose these to Piano especially when it has lyrics. I was able to get ChatGPT to tranpose a lot of these for me which I then would convert to PDF manually. It was tedious but worked until it didn't anymore. As we got the end of November, songs were failing to be transposed due to copyright issues with the song lyrics and ChatGPT would choke or just give me one verse.
+
+As I couldn't find anything else out there to do this Capo2Keys (originally named Chordbox and then CapoToKeys) was created. I used Codex in Visual Code Studio to a bit of vibecoding to have this realised as a Docker container that I could spin up when I needed and an accompanying Python application as proof of concept for a Desktop version.
+
+I hope you get as much use out of this as I do and feel free to make suggestions to make this more useful to everyone.
+
+---
 
 ## Quick Start (Docker)
 
@@ -50,12 +83,12 @@ Outputs are written to `/data/outputs` (mapped to your local volume path).
 ## Pull From GHCR (No Local Build)
 
 ```bash
-docker pull ghcr.io/reprodev/Capo2Keys:latest
+docker pull ghcr.io/reprodev/capo2keys:latest
 docker run -d \
   --name Capo2Keys \
   -p 4506:4506 \
   -v "./data:/data" \
-  ghcr.io/reprodev/Capo2Keys:latest
+  ghcr.io/reprodev/capo2keys:latest
 ```
 
 ## Quick Start (GHCR + Compose)
@@ -68,7 +101,7 @@ docker compose up -d
 
 Default image reference in that file:
 
-- `ghcr.io/reprodev/Capo2Keys:latest`
+- `ghcr.io/reprodev/capo2keys:latest`
 
 If the package is private, authenticate first:
 
@@ -181,11 +214,6 @@ GHCR setup details: `docs/GHCR_SETUP.md`
 ## License
 
 MIT — see `LICENSE`.
-
-
-
-
-
 
 
 
