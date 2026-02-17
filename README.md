@@ -65,18 +65,18 @@ I hope you get as much use out of this as I do and feel free to make suggestions
 ## Quick Start (Docker)
 
 ```bash
-docker build -t capo-to-keys:latest -f dockerfile .
+docker build -t capo2keys:local -f dockerfile .
 
 docker run -d \
-  --name Capo2Keys \
+  --name capo2keys \
   -p 4506:4506 \
   -v "./data:/data" \
-  capo-to-keys:latest
+  capo2keys:local
 ```
 
 Open: `http://localhost:4506`
 
-`capo-to-keys:latest` in this section is a local image tag built on your machine.
+`capo2keys:local` in this section is a local image tag built on your machine.
 
 Outputs are written to `/data/outputs` (mapped to your local volume path).
 
@@ -85,7 +85,7 @@ Outputs are written to `/data/outputs` (mapped to your local volume path).
 ```bash
 docker pull ghcr.io/reprodev/capo2keys:latest
 docker run -d \
-  --name Capo2Keys \
+  --name capo2keys \
   -p 4506:4506 \
   -v "./data:/data" \
   ghcr.io/reprodev/capo2keys:latest
@@ -96,7 +96,7 @@ docker run -d \
 Use the included compose example:
 
 ```bash
-docker compose up -d
+docker compose -f docker-compose.ghcr.yml up -d
 ```
 
 Default image reference in that file:
