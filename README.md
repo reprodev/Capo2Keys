@@ -58,6 +58,8 @@ I took up the piano now just over a few years ago and have played guitar for muc
 
 As I couldn't find anything else out there to do this Capo2Keys (originally named Chordbox and then CapoToKeys) was created. I used Codex in Visual Code Studio to a bit of vibecoding to have this realised as a Docker container that I could spin up when I needed and an accompanying Python application as proof of concept for a Desktop version.
 
+This is also my first time using GitHub actions with GitHub secrets (GitHub PAT) to build a Docker image that I can now pull using a Docker Compose or Docker Run command just like some of my favourite Docker based applications.
+
 I hope you get as much use out of this as I do and feel free to make suggestions to make this more useful to everyone.
 
 ---
