@@ -54,7 +54,9 @@ Capo2Keys provides a Docker-first Flask WebUI, a CLI mode for scripts, and an op
 
 ## Why did I make this?
 
-I took up the piano now just over a few years ago and have played guitar for much longer than that. I loved being able to pick up the guitar with a capo and play songs from Chord sheets on the internet. The main problem was that my music theory was not good enough to be able to easily tranpose these to Piano especially when it has lyrics. I was able to get ChatGPT to tranpose a lot of these for me which I then would convert to PDF manually. It was tedious but worked until it didn't anymore. As we got the end of November, songs were failing to be transposed due to copyright issues with the song lyrics and ChatGPT would choke or just give me one verse.
+I took up the piano now just over a few years ago and have played guitar for much longer than that. I loved being able to pick up the guitar with a capo and play songs from Chord sheets on the internet. 
+
+The main problem was that my music theory was not good enough to be able to easily tranpose these to Piano especially when it has lyrics. I was able to get ChatGPT to tranpose a lot of these for me which I then would convert to PDF manually. It was tedious but worked until it didn't anymore. As we got the end of November, songs were failing to be transposed due to copyright issues with the song lyrics and ChatGPT would choke or just give me one verse.
 
 As I couldn't find anything else out there to do this Capo2Keys (originally named Chordbox and then CapoToKeys) was created. I used Codex in Visual Code Studio to a bit of vibecoding to have this realised as a Docker container that I could spin up when I needed and an accompanying Python application as proof of concept for a Desktop version.
 
